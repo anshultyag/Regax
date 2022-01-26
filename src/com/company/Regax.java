@@ -25,9 +25,12 @@ public class Regax {
        public static boolean passwordUpperCase(String upperCase) {
         return upperCase.matches("^(?=.*[A-Z])[A-Za-z]{8,}$");
         }
-    public static boolean passwordOneNumeric(String numeric) {
-        return numeric.matches("^(?=.*[A-Z])(?=.*[0-9])[A-Za-z\\d]{8,}$");
-    }
+       public static boolean passwordOneNumeric(String numeric) {
+         return numeric.matches("^(?=.*[A-Z])(?=.*[0-9])[A-Za-z\\d]{8,}$");
+        }
+       public static boolean passwordSpecialCharacter(String specialCharacter) {
+          return specialCharacter.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z\\d]{8,}");
+       }
         public static void main(String[] args){
             Scanner sc = new Scanner(System.in);
             System.out.println("Please enter your First name : ");
@@ -46,5 +49,6 @@ public class Regax {
             System.out.println(password("absolute"));
             System.out.println(passwordUpperCase("Absolute"));
             System.out.println(passwordOneNumeric("Absolute778"));
+            System.out.println(passwordSpecialCharacter("Absolute778@"));
         }
     }
