@@ -16,11 +16,15 @@ public class Regax {
         Matcher m = p.matcher(email);
         return m.matches();
          }
-       public static boolean mobileNum( String mobileNo) {
+      public static boolean mobileNum( String mobileNo) {
           return mobileNo.matches( "91\\s[0-9]{10}$" );
         }
-    public static boolean password(String pass){
+      public static boolean password(String pass){
         return pass.matches("^[A-Za-z]{8,}$");
+        }
+    public static boolean passwordUpperCase(String upperCase) {
+
+        return upperCase.matches("^(?=.*[A-Z])[A-Za-z]{8,}$");
     }
         public static void main(String[] args){
             Scanner sc = new Scanner(System.in);
@@ -38,5 +42,6 @@ public class Regax {
             System.out.println(mobileNum("91 9919819801"));
 
             System.out.println(password("absolute"));
+            System.out.println(passwordUpperCase("Absolute"));
         }
     }
