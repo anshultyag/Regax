@@ -16,6 +16,9 @@ public class Regax {
         Matcher m = p.matcher(email);
         return m.matches();
          }
+       public static boolean mobileNum( String mobileNo) {
+          return mobileNo.matches( "91\\s[0-9]{10}$" );
+        }
         public static void main(String[] args){
             Scanner sc = new Scanner(System.in);
             System.out.println("Please enter your First name : ");
@@ -28,5 +31,7 @@ public class Regax {
             System.out.println("Please enter your Email : ");
             String str3 = sc.nextLine();
             System.out.println(isValidEmail(str1));
+
+            System.out.println(mobileNum("91 9919819801"));
         }
     }
