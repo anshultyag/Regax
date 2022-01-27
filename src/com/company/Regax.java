@@ -17,7 +17,7 @@ public class Regax {
         return m.matches();
          }
        public static boolean mobileNum( String mobileNo) {
-          return mobileNo.matches( "91\\s[0-9]{10}$" );
+          return mobileNo.matches( "91\\s[8-9][0-9]{9}$" );
          }
        public static boolean password(String pass){
         return pass.matches("^[A-Za-z]{8,}$");
