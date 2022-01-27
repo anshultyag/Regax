@@ -17,7 +17,7 @@ public class Regax {
         return m.matches();
          }
        public static boolean mobileNum( String mobileNo) {
-          return mobileNo.matches( "91\\s[0-9]{10}$" );
+          return mobileNo.matches( "91\\s[8-9][0-9]{9}$" );
         }
         public static void main(String[] args){
             Scanner sc = new Scanner(System.in);
